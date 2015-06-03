@@ -12,7 +12,8 @@
 body {
     font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
     /* background of the entire page */
-    background: url('http://www.freestockphotos.name/wallpaper-original/wallpapers/cardiology-hd-2490.jpg') no-repeat center center fixed;
+    background-color: red;
+    /*background: url('http://www.freestockphotos.name/wallpaper-original/wallpapers/cardiology-hd-2490.jpg') no-repeat center center fixed;*/
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -117,6 +118,10 @@ footer p {
     margin: 0;
     padding: 50px 0;
 }
+
+.prijatelji {
+   
+}
 /*   */
 @media screen and (min-width:768px) {
     .brand {
@@ -204,7 +209,8 @@ footer p {
 body {
     font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
     /* background of the entire page */
-    background: url('http://www.freestockphotos.name/wallpaper-original/wallpapers/cardiology-hd-2490.jpg') no-repeat center center fixed;
+    background-color: red;
+    /*background: url('http://www.freestockphotos.name/wallpaper-original/wallpapers/cardiology-hd-2490.jpg') no-repeat center center fixed;*/
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
