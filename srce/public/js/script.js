@@ -40,6 +40,18 @@ srce.config(function($routeProvider) {
     controller  : 'booksCtrl'
   })
 
+  // route for the gallery page for photos
+  .when('/gallery/photo', {
+    templateUrl : 'js/pages/photo.html',
+    controller  : 'galleryCtrl'
+  })
+
+  // route for the gallery page for video
+  .when('/gallery/video', {
+    templateUrl : 'js/pages/video.html',
+    controller  : 'videoCtrl'
+  })
+
   // route for the contact page
   .when('/contact', {
     templateUrl : 'js/pages/contact.html',
@@ -47,12 +59,17 @@ srce.config(function($routeProvider) {
   });
 });
 
+//*************************************************************************
+
 srce.run(function($rootScope, $location, $anchorScroll, $routeParams) {
   $rootScope.$on('$routeChangeSuccess', function(newRoute, oldRoute) {
     $location.hash($routeParams.scrollTo);
     $anchorScroll();  
   });
 })
+
+//**************************************************************************
+// >>>>>>>>>>>>>>>>>> controllers <<<<<<<<<<<<<<<<<<<
 
 // create the controller and inject Angular's $scope
 srce.controller('mainCtrl', function($scope) {
@@ -73,7 +90,32 @@ srce.controller('aboutCtrl', function($scope) {
 });
 
 // create the controller and inject Angular's $scope
+srce.controller('galleryCtrl', function($scope) {
+  // create a message to display in our view
+  $scope.message = 'Everyone come and see how good I look!';
+});
+
+//==============================================================
+
+// create the controller and inject Angular's $scope
+srce.controller('videoCtrl', function($scope, $http) {
+  // create a message to display in our view
+  $scope.message = 'Everyone come and see how good I look!';
+
+  $scope.videos=[];
+
+  $http.get('js/json/video.json').success(function(data){
+    $scope.videos=data;
+  })
+});
+
+//============================================================
+
+// create the controller and inject Angular's $scope
 srce.controller('contactCtrl', function($scope) {
   // create a message to display in our view
   $scope.message = 'Everyone come and see how good I look!';
 });
+
+//===================================================================
+
