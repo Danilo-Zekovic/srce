@@ -52,6 +52,12 @@ srce.config(function($routeProvider) {
     controller  : 'videoCtrl'
   })
 
+  // route for the gallery page for what others write
+  .when('/gallery/drugi-pisu', {
+    templateUrl : 'js/pages/others-write.html',
+    controller  : 'galleryCtrl'
+  })
+
   // route for the contact page
   .when('/contact', {
     templateUrl : 'js/pages/contact.html',
@@ -93,7 +99,15 @@ srce.controller('aboutCtrl', function($scope) {
 srce.controller('galleryCtrl', function($scope) {
   // create a message to display in our view
   $scope.message = 'Everyone come and see how good I look!';
+  $scope.slike = slike();
 });
+
+// function that loads the theme and displays the pictures 
+var slike = function(){
+  Galleria.loadTheme('js/galleria/themes/classic/galleria.classic.min.js');
+  Galleria.run('.galleria');
+};
+
 
 //==============================================================
 
