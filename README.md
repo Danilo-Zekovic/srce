@@ -1,5 +1,6 @@
 # srce
 Personal webpage for a cardiologist   
+Page is in Serbian, but I tried to keep the code and naming in English  
 
 To run this app:  
 1. go into srce dir   
